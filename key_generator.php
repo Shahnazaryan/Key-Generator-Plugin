@@ -15,15 +15,10 @@ define('KEYGEN_DIR', plugin_dir_path(__FILE__));
 define('KEYGEN_URL', plugin_dir_url(__FILE__));
 define('KEYGEN_PLUGIN_FILE', __FILE__);
 
-//require(KEYGEN_DIR . '/lib/admin/keygen-admin.php');
 require(KEYGEN_DIR.'/lib/admin/core.php');
+require(KEYGEN_DIR.'/lib/admin/switcher.php');
 
-/* Load custom css */
-function main_css(){
-    echo '<link rel="stylesheet" href="'.plugins_url( '/key-generator/lib/styles/keygen-style.css',__FILE__).'" type="text/css" media="all" />';
-   }
-add_action('wp_head', 'main_css');
-/* plugin activation  and deactivation actions
+/* plugin activation  and deactivation actions*/
 register_activation_hook(__FILE__, 'keygen_activation');
-register_deactivation_hook(__FILE__, 'keygen_deactivation');*/
+/*register_deactivation_hook(__FILE__, 'keygen_deactivation');*/
 ?>
