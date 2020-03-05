@@ -105,7 +105,7 @@ function sender_my_plugin_scripts() {
 
 }
 add_action('admin_init', 'sender_my_plugin_scripts');
-add_action('admin_menu', 'mail_menu');
+// add_action('admin_menu', 'mail_menu');
 
 
 
